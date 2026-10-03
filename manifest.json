@@ -1,0 +1,16 @@
+{
+  "short_name": "FDARecalls",
+  "name": "FDA Recalls & Safety Tracker",
+  "icons": [
+    {
+      "src": "https://gstatic.com",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1a73e8",
+  "display": "standalone",
+  "orientation": "portrait"
+}
