@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDA Recalls Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Material Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-title">
+            <span class="material-icons">gpp_maybe</span>
+            <h1>FDA Recalls Tracker</h1>
+        </div>
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" id="searchInput" placeholder="Search brands or products...">
+            </div>
+            <div class="filter-select">
+                <select id="typeFilter">
+                    <option value="All">All Product Types</option>
+                    <option value="Food & Beverages">Food & Beverages</option>
+                    <option value="Drugs">Drugs</option>
+                    <option value="Medical Devices">Medical Devices</option>
+                    <option value="Cosmetics">Cosmetics</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="results-meta">
+            <span id="resultCount">Showing 0 alerts</span>
+            <span class="current-date">As of: Oct 3, 2026</span>
+        </div>
+        <div id="recallsList" class="recalls-list">
+            <!-- Dynamic cards inject here from script.js -->
+        </div>
+    </main>
+
+    <!-- Detailed Modal View -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="material-icons close-btn">close</span>
+            <div class="modal-body">
+                <!-- Dynamic content injects here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
