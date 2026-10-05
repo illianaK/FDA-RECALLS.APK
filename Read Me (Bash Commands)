@@ -1,0 +1,93 @@
+Set Up Your Android Bash Terminal
+-------------------------------------------------------------
+To run the setup commands right on your phone without a laptop, you need a local command-line interface:
+-------------------------------------------------------------
+1. Download and open Termux (available via F-Droid or GitHub).
+-------------------------------------------------------------
+2. Give Termux access to your phone's internal storage folders by typing this command and hitting enter:
+-------------------------------------------------------------
+bash
+
+termux-setup-storage
+
+Use code with caution.
+-------------------------------------------------------------
+3. Update your core packages and install Node.js onto your phone's system partition:
+-------------------------------------------------------------
+bash 
+
+pkg update && pkg install nodejs -y
+
+Use code with caution.
+-------------------------------------------------------------
+4. Navigate directly into your application directory (replace the path with your actual folder location):
+-------------------------------------------------------------
+bash
+
+cd /sdcard/Documents/FDARecalls
+
+Use code with caution.
+-------------------------------------------------------------
+🚀 Step 3: Run the Native Packaging Commands
+Now that your terminal is pointed at your code folder inside your phone, copy and paste these commands into Termux one line at a time to download the Capacitor wrapper engine:
+-------------------------------------------------------------
+bash
+
+npm install @capacitor/core @capacitor/cli
+
+Use code with caution.
+
+(Downloads the framework container software onto your phone storage).
+-------------------------------------------------------------
+bash
+
+npx cap init "FDA Recalls Tracker" "com.yourname.fdarecalls" --web-dir=.
+
+Use code with caution.
+-------------------------------------------------------------
+(Initializes the structural layers).
+-------------------------------------------------------------
+bash
+
+npm install @capacitor/android
+
+npx cap add android
+
+Use code with caution.
+-------------------------------------------------------------
+(Assembles the local native Android file architecture structures).
+-------------------------------------------------------------
+📦 Step 4: Compile into a Native App Without a PC
+To convert those generated files into an installable .apk file directly on your ThinkPhone, you can install a mobile compiler system inside Termux:
+-------------------------------------------------------------
+1. Install the Android software development kit tools and a Java runtime package into your terminal shell environment:
+-------------------------------------------------------------
+bash
+
+pkg install openjdk-17 android-tools -y
+
+Use code with caution.
+-------------------------------------------------------------
+2. Sync your web changes directly into the native framework build configurations:
+-------------------------------------------------------------
+bash
+
+npx cap copy android
+
+Use code with caution.
+-------------------------------------------------------------
+3. Compile the production native build bundle:
+-------------------------------------------------------------
+bash
+
+cd android && ./gradlew assembleDebug
+
+Use code with caution.
+-------------------------------------------------------------
+Once the compilation script finishes running, your native installation packet will be generated at 
+
+android/app/build/outputs/apk/debug/app-debug.apk.
+
+ Open your phone's default Files app, locate that .apk file, and tap it to install your new self-updating tracker app.
+-------------------------------------------------------------
+
